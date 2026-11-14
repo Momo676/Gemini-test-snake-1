@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slither Arena - Skill Multiplayer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="lobby" class="screen">
+        <div class="card">
+            <h1>🐍 SLITHER ARENA</h1>
+            <p>Select your entry room & test your reflexes!</p>
+            <input type="text" id="playerName" placeholder="Enter your nickname..." value="Player" maxlength="15">
+            <div class="room-selector">
+                <button class="room-btn" data-tier="25">25 EGP Room</button>
+                <button class="room-btn" data-tier="50">50 EGP Room</button>
+                <button class="room-btn" data-tier="100">100 EGP Room</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="game-container" class="screen hidden">
+        <canvas id="gameCanvas"></canvas>
+        <div id="hud">
+            <div class="hud-item">Score: <span id="scoreVal">15</span></div>
+            <div class="hud-item">Room: <span id="roomVal">25</span> EGP</div>
+            <button id="cashOutBtn">HOLD TO CASH OUT</button>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
